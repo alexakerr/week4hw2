@@ -1,28 +1,17 @@
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import UserProfile from './components/UserProfile'
+import MoviesList from './components/MoviesList'
 
-import './App.css'; 
-import MoviesList from './components/moviesList';
-import UserProfile from './components/userProfile';
-
-
-
-function App(){
+function App() {
   return (
-    <div className="app-container">
-      <Routes>
-        {}
-        <Route path='/' element={<Home />} />
-        <Route path='/movies' element={<MoviesListList /> } /> 
-        <Route path='/add-movie' element={<MoviesList />} />
-        <Route path='/edit-movie/:id' element={<MoviesList />} />
-        {}
-        <Route path='*' element={<NotFound />} />
-      </Routes>
-    </div>
+  <>
+    <UserProfile />
+    <MoviesList />
+  </>
   )
 }
 
-
 export default App
-
